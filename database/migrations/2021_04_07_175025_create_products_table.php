@@ -16,12 +16,15 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('title', 150);
+
             $table->foreignId('category_id')->constrained();
             $table->foreignId('brand_id')->constrained();
             $table->foreignId('group_id')->constrained();
+
             $table->enum('type', [
                 'standard', 'variant'
             ])->default('standard');
+
             $table->timestamps();
         });
     }

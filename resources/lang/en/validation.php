@@ -137,6 +137,7 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'csv_file_rule' => 'Only accepted file type is .csv',
     ],
 
     /*
