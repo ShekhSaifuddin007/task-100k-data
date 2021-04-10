@@ -13,7 +13,7 @@
 
 // ====================>
 
-I attach the 100k csv format data in the root `test_products_100k.csv`
+I attach the 100k csv format data in root of project `test_products_100k.csv`
 
 upload this file,
 
