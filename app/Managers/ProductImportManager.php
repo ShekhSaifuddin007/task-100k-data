@@ -39,6 +39,7 @@ class ProductImportManager
         $this->saveBrands();
         $this->saveGroups();
 
+        // optimized insert query
         $productRows = [];
         $variantRows = [];
 
