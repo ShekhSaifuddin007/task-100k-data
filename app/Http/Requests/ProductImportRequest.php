@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\CSVRowRule;
 use App\Rules\ValidCSVRule;
 use Illuminate\Foundation\Http\FormRequest;
 

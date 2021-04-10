@@ -32,11 +32,15 @@ class ProductImportJob implements ShouldQueue
         resolve(ProductImportManager::class)
             ->bulkInsert($this->products);
 
-        if ($file = $this->is_not_last) {
-            $from = $file['directory'] . DIRECTORY_SEPARATOR . $file['file_name'];
-            $to = str_replace('importing', 'imported', $from);
-            copy($from, $to);
-            unlink($from);
+        try {
+            if ($file = $this->is_not_last) {
+                $from = $file['directory'] . DIRECTORY_SEPARATOR . $file['file_name'];
+                $to = str_replace('importing', 'imported', $from);
+                copy($from, $to);
+                unlink($from);
+            }
+        } catch (\Exception $e) {
+            logger($e->getMessage());
         }
     }
 }

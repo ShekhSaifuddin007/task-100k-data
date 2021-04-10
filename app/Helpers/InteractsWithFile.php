@@ -18,7 +18,7 @@ trait InteractsWithFile
 
     public function save($destination = '/'): string
     {
-        return $this->file->store($destination);
+        return $this->file->store('public'. DIRECTORY_SEPARATOR . $destination);
     }
 
     public function pathToUploadedFile($path, $test = true): UploadedFile

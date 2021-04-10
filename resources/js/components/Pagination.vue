@@ -19,7 +19,6 @@
             </li>
             <li class="page-item" :class="{ 'disabled': pagination.current_page >= pagination.last_page }">
                 <a class="page-link" @click.prevent="changePage(pagination.last_page)">Last</a>
-
             </li>
         </ul>
     </nav>

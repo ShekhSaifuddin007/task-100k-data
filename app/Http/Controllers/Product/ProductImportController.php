@@ -22,8 +22,9 @@ class ProductImportController extends Controller
 
     public function import(Request $request, Manager $manager): JsonResponse
     {
+        $path = 'product'. DIRECTORY_SEPARATOR. 'importable';
         $manager->file($request->file('products'))
-            ->save('product/importable');
+            ->save($path);
 
         return response()->json("Product upload successfully.!");
     }
