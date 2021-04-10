@@ -15,14 +15,16 @@ class CreateProductVariantsTable extends Migration
     {
         Schema::create('product_variants', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('product_id')->constrained();
+            $table->foreignId('product_id')
+                ->nullable()
+                ->constrained();
 
-            $table->string('name');
-            $table->string('value');
+            $table->string('name')->nullable();
+            $table->string('value')->nullable();
 
-            $table->string('sku', 30);
-            $table->string('barcode', 30);
-            $table->float('price');
+            $table->string('sku', 100)->nullable();
+            $table->string('barcode', 100)->nullable();
+            $table->float('price')->nullable();
             $table->timestamps();
         });
     }

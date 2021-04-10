@@ -24,8 +24,6 @@ class CreateProductsTable extends Migration
             $table->enum('type', [
                 'standard', 'variant'
             ])->default('standard');
-
-            $table->timestamps();
         });
     }
 

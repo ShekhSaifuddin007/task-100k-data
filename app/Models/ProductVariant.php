@@ -10,6 +10,8 @@ class ProductVariant extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

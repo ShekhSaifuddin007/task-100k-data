@@ -11,6 +11,8 @@ class Product extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
