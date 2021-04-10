@@ -5,13 +5,15 @@
 - then `npm install`
 - then `artisan migrate`
 
-I attach the 100k data in the root `test_products.csv`
-
 ### Routes
 
 `domain/products` is responsible for get data,
 
 `domain/products/import` is responsible for insert 100k data,
+
+// ====================>
+
+I attach the 100k data in the root `test_products.csv`
 
 upload this file,
 
