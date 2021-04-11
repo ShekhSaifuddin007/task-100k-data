@@ -2,7 +2,7 @@
 
 - clone this repo.
 - then `composer install`.
-- then `npm install`
+- then `npm install` and `npm run dev`
 - then `artisan migrate`
 
 ### Routes
